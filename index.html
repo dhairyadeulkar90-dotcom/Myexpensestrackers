@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Expenses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+    <div class="container">
+
+        <h1>Daily Expenses</h1>
+        <p class="subtitle">Track where your money goes</p>
+
+        <div class="cards">
+            <div class="card today">
+                <p>TODAY</p>
+                <h2 id="todayAmount">₹0.00</h2>
+            </div>
+
+            <div class="card total">
+                <p>ALL TIME</p>
+                <h2 id="totalAmount">₹0.00</h2>
+            </div>
+        </div>
+
+        <div class="form">
+            <h3>+ Add Expense</h3>
+
+            <input type="date" id="date">
+            <input type="text" id="desc" placeholder="Expense description">
+            <input type="number" id="amount" placeholder="Amount">
+
+            <div class="categories">
+                <button onclick="setCategory(event, 'Food')">Food</button>
+                <button onclick="setCategory(event, 'Transport')">Transport</button>
+                <button onclick="setCategory(event, 'Shopping')">Shopping</button>
+                <button onclick="setCategory(event, 'Bills')">Bills</button>
+                <button onclick="setCategory(event, 'Entertainment')">Entertainment</button>
+                <button onclick="setCategory(event, 'Other')">Other</button>
+            </div>
+
+            <button class="add-btn" onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="history">
+            <h3>History</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
